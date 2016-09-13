@@ -1,0 +1,14 @@
+2016/09/13 04:38:43 [error] 1386#1386: *14 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'The stream or file "/docker/CD/laravel/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied' in /docker/CD/laravel/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /docker/CD/laravel/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /docker/CD/laravel/vendor/monolog/monolog/src/Monolog/Logger.php(336): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /docker/CD/laravel/vendor/monolog/monolog/src/Monolog/Logger.php(615): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /docker/CD/laravel/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /docker/CD/laravel/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', Object(Une...
+PHP message: PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'The stream or file "/docker/CD/laravel/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied' in /docker/CD/laravel/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /docker/CD/laravel/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /docker/CD/laravel/vendor/monolog/monolog/src/Monolog/Logger.php(336): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /docker/CD/laravel/vendor/monolog/monolog/src/Monolog/Logger.php(615): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /docker/CD/laravel/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /docker/
