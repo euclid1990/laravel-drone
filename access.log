@@ -1,6 +1,0 @@
-172.17.0.1 - - [13/Sep/2016:04:37:02 +0000] "GET / HTTP/1.1" 404 209 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
-172.17.0.1 - - [13/Sep/2016:04:37:05 +0000] "GET / HTTP/1.1" 404 209 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
-172.17.0.1 - - [13/Sep/2016:04:37:47 +0000] "GET / HTTP/1.1" 404 209 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
-172.17.0.1 - - [13/Sep/2016:04:38:17 +0000] "GET / HTTP/1.1" 404 209 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
-172.17.0.1 - - [13/Sep/2016:04:38:43 +0000] "GET / HTTP/1.1" 500 5 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
-172.17.0.1 - - [13/Sep/2016:04:39:03 +0000] "GET / HTTP/1.1" 200 828 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
