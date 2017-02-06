@@ -2,7 +2,7 @@ project_type: php
 test:
   phpunit:
     command:
-      - php artisan migrate --database=homestead
+      - php artisan migrate --database=demo
       - php -dzend_extension=xdebug.so vendor/bin/phpunit
         --coverage-clover=.framgia-ci-reports/coverage-clover.xml
         --coverage-html=.framgia-ci-reports/coverage

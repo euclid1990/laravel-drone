@@ -11,9 +11,9 @@ compose:
     expose:
       - "3306"
     environment:
-      MYSQL_DATABASE: homestead
-      MYSQL_USER: homestead
-      MYSQL_PASSWORD: secret
+      MYSQL_DATABASE: demo
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
       MYSQL_ROOT_PASSWORD: root
 cache:
   mount:
