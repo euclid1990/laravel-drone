@@ -3,13 +3,13 @@ build:
   commands:
     - cp .env.example .env
     - composer install
-    - npm install
-    - gulp
     - framgia-ci test-connect 127.0.0.1 3306 60
     - framgia-ci run
 compose:
-  database:
+  mysql_test:
     image: mysql
+    expose:
+      - "3306"
     environment:
       MYSQL_DATABASE: homestead
       MYSQL_USER: homestead
