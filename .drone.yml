@@ -12,9 +12,9 @@ compose:
     expose:
       - "3306"
     environment:
-      MYSQL_DATABASE: demo
-      MYSQL_USER: root
-      MYSQL_PASSWORD: secret
+      MYSQL_DATABASE: demo_db
+      MYSQL_USER: demo_user
+      MYSQL_PASSWORD: demo_pw
       MYSQL_ROOT_PASSWORD: root
 
 cache:
