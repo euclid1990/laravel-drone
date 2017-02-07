@@ -8,8 +8,8 @@ build:
 compose:
   database:
     image: mysql
-    expose:
-      - "3306"
+    port:
+      - "3306":"3306"
     environment:
       MYSQL_DATABASE: demo
       MYSQL_USER: root
