@@ -1,5 +1,6 @@
 build:
   image: framgia/laravel-workspace
+  branch: develop
   commands:
     - pwd
     - ls -la
