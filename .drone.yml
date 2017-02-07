@@ -4,7 +4,7 @@ build:
     - cp .env.example .env
     - composer install
     - php artisan key:generate
-    - framgia-ci test-connect 127.0.0.1 3306 15
+    - framgia-ci test-connect 127.0.0.1 3306 10
     - framgia-ci run
 
 compose:
@@ -21,5 +21,4 @@ compose:
 cache:
   mount:
     - vendor
-    - node_modules
     - .git
