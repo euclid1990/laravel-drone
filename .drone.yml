@@ -4,8 +4,7 @@ build:
     - cp .env.example .env
     - composer install
     - php artisan key:generate
-    - npm install -g yarn
-    - yarn install
+    - npm install
     - gulp
     - framgia-ci test-connect 127.0.0.1 3306 15
     - framgia-ci run
@@ -24,4 +23,5 @@ compose:
 cache:
   mount:
     - vendor
+    - node_modules
     - .git
