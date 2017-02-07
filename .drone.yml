@@ -17,5 +17,4 @@ compose:
 cache:
   mount:
     - vendor
-    - node_modules
     - .git
