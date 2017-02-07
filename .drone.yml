@@ -1,6 +1,7 @@
 build:
   image: framgia/laravel-workspace
   commands:
+    - pwd
     - ls -la
     - composer install
     - php artisan key:generate
