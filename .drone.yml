@@ -7,7 +7,7 @@ build:
     - framgia-ci test-connect 127.0.0.1 3306 60
     - framgia-ci run
 compose:
-  mysql_test:
+  database:
     image: mysql
     expose:
       - "3306"
