@@ -5,6 +5,7 @@ build:
     - composer install
     - framgia-ci test-connect 127.0.0.1 3306 15
     - framgia-ci run
+
 compose:
   database:
     image: mysql
@@ -15,6 +16,7 @@ compose:
       MYSQL_USER: root
       MYSQL_PASSWORD: root
       MYSQL_ROOT_PASSWORD: root
+
 cache:
   mount:
     - vendor
