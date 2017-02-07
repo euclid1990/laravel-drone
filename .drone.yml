@@ -3,18 +3,18 @@ build:
   commands:
     - cp .env.example .env
     - composer install
-    - framgia-ci test-connect 113.190.240.135 80 15
+    - framgia-ci test-connect 127.0.0.1 3306 15
     - framgia-ci run
 
 compose:
   database:
     image: mysql
-    port:
-      - "3306:3306"
+    expose:
+      - "3306"
     environment:
       MYSQL_DATABASE: demo
       MYSQL_USER: root
-      MYSQL_PASSWORD: root
+      MYSQL_PASSWORD: secret
       MYSQL_ROOT_PASSWORD: root
 
 cache:
