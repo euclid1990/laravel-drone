@@ -3,6 +3,3 @@ test:
   phpunit:
     command:
       - php artisan migrate
-      - php -dzend_extension=xdebug.so vendor/bin/phpunit
-        --coverage-clover=.framgia-ci-reports/coverage-clover.xml
-        --coverage-html=.framgia-ci-reports/coverage
