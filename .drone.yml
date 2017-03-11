@@ -12,7 +12,7 @@ pipeline:
       - cp .env.example .env
       - composer install
       - php artisan key:generate
-      - php artusan config:cache
+      - php artisan config:cache
       - sleep 30
       - php artisan migrate
       - php vendor/bin/phpunit
