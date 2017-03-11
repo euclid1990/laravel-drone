@@ -11,9 +11,14 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function testBasicExample()
+    public function testBasic1()
     {
         $this->visit('/')
              ->see('Frontend');
+    }
+
+    public function testBasic2()
+    {
+        $this->assertEquals('foo', 'fooo');
     }
 }
