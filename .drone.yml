@@ -12,7 +12,8 @@ pipeline:
       - cp .env.example .env
       - composer install
       - php artisan key:generate
-      - sleep 15
+      - sleep 3
+      - mysql -udemo_user -pdemo_pw
       - php artisan migrate
       - php vendor/bin/phpunit
   rebuild-cache:
