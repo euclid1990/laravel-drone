@@ -5,7 +5,7 @@ pipeline:
     mount:
       - ./vendor
     volumes:
-      - ./cache:/cache
+      - /home/euclid/Project/drone/cache:/cache
   build:
     image: framgia/laravel-workspace
     commands:
@@ -19,7 +19,7 @@ pipeline:
     mount:
       - ./vendor
     volumes:
-      - ./cache:/cache
+      - /home/euclid/Project/drone/cache:/cache
 
 services:
   database:
