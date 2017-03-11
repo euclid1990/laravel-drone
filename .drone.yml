@@ -10,12 +10,14 @@ pipeline:
     image: framgia/laravel-workspace
     commands:
       - cp .env.example .env
-      - composer install
-      - php artisan key:generate
-      - php artisan config:cache
-      - sleep 10
+      # - composer install
+      # - php artisan key:generate
+      # - php artisan config:cache
+      # - sleep 10
       # - php artisan migrate
-      - php vendor/bin/phpunit
+      # - php vendor/bin/phpunit
+  publish:
+    image: euclid1990/docker05
   rebuild-cache:
     image: drillster/drone-volume-cache
     rebuild: true
@@ -25,8 +27,8 @@ pipeline:
       - /home/euclid/Project/drone/cache:/cache
 
 services:
-  drone05:
-    image: drone05
+  drone:
+    image: drone5
   database:
     image: mysql
     restart: always
