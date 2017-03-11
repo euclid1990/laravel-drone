@@ -20,7 +20,6 @@ pipeline:
       - ./vendor
     volumes:
       - ./cache:/cache
-
 services:
   database:
     image: mysql
