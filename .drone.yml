@@ -25,6 +25,7 @@ pipeline:
 services:
   database:
     image: mysql
+    restart: always
     expose:
       - "3306"
     environment:
