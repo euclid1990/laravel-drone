@@ -17,7 +17,7 @@ class ExampleTest extends TestCase
              ->see('Frontend');
     }
 
-    public function testBasic2()
+    public function testBasic3()
     {
         $this->assertEquals('foo', 'foo');
     }
