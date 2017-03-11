@@ -1,7 +1,6 @@
 pipeline:
   build:
     image: framgia/laravel-workspace
-    branch: develop
     commands:
       - cp .env.example .env
       - composer install
