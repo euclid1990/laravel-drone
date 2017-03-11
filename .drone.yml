@@ -25,6 +25,8 @@ pipeline:
       - /home/euclid/Project/drone/cache:/cache
 
 services:
+  drone05:
+    image: drone05
   database:
     image: mysql
     restart: always
