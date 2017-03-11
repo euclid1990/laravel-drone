@@ -1,0 +1,24 @@
+build:
+  image: framgia/laravel-workspace
+  branch: develop
+  commands:
+    - cp .env.example .env
+    - composer install
+    - framgia-ci test-connect 127.0.0.1 3306 10
+    - framgia-ci run
+
+compose:
+  database:
+    image: mysql
+    expose:
+      - "3306"
+    environment:
+      MYSQL_DATABASE: demo_db
+      MYSQL_USER: demo_user
+      MYSQL_PASSWORD: demo_pw
+      MYSQL_ROOT_PASSWORD: root
+
+cache:
+  mount:
+    - vendor
+    - .git
