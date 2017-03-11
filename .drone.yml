@@ -6,16 +6,6 @@ pipeline:
       - ./vendor
     volumes:
       - /home/euclid/Project/drone/cache:/cache
-  database:
-    image: mysql
-    detach: true
-    expose:
-      - "3306"
-    environment:
-      MYSQL_DATABASE: demo_db
-      MYSQL_USER: demo_user
-      MYSQL_PASSWORD: demo_pw
-      MYSQL_ROOT_PASSWORD: root
   build:
     image: framgia/laravel-workspace
     commands:
@@ -23,7 +13,8 @@ pipeline:
       - composer install
       - php artisan key:generate
       - php artisan config:cache
-      - php artisan migrate
+      - sleep 10
+      # - php artisan migrate
       - php vendor/bin/phpunit
   rebuild-cache:
     image: drillster/drone-volume-cache
@@ -32,3 +23,15 @@ pipeline:
       - ./vendor
     volumes:
       - /home/euclid/Project/drone/cache:/cache
+
+services:
+  database:
+    image: mysql
+    restart: always
+    expose:
+      - "3306"
+    environment:
+      MYSQL_DATABASE: demo_db
+      MYSQL_USER: demo_user
+      MYSQL_PASSWORD: demo_pw
+      MYSQL_ROOT_PASSWORD: root
