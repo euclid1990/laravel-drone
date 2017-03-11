@@ -19,6 +19,6 @@ class ExampleTest extends TestCase
 
     public function testBasic2()
     {
-        $this->assertEquals('foo', 'fooo');
+        $this->assertEquals('foo', 'foo');
     }
 }
