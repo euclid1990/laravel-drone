@@ -17,7 +17,7 @@ pipeline:
       # - php artisan migrate
       # - php vendor/bin/phpunit
   publish:
-    image: euclid1990/docker05
+    image: euclid1990/drone05
   rebuild-cache:
     image: drillster/drone-volume-cache
     rebuild: true
@@ -26,14 +26,14 @@ pipeline:
     volumes:
       - /home/euclid/Project/drone/cache:/cache
 
-services:
-  database:
-    image: mysql
-    restart: always
-    expose:
-      - "3306"
-    environment:
-      MYSQL_DATABASE: demo_db
-      MYSQL_USER: demo_user
-      MYSQL_PASSWORD: demo_pw
-      MYSQL_ROOT_PASSWORD: root
+# services:
+#   database:
+#     image: mysql
+#     restart: always
+#     expose:
+#       - "3306"
+#     environment:
+#       MYSQL_DATABASE: demo_db
+#       MYSQL_USER: demo_user
+#       MYSQL_PASSWORD: demo_pw
+#       MYSQL_ROOT_PASSWORD: root
