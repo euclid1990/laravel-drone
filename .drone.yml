@@ -1,10 +1,25 @@
 pipeline:
+  restore-cache:
+    image: drillster/drone-volume-cache
+    restore: true
+    mount:
+      - ./vendor
+    volumes:
+      - ./cache:/cache
   build:
     image: framgia/laravel-workspace
     commands:
       - cp .env.example .env
       - composer install
       - php artisan migrate
+      - php vendor/bin/phpunit
+  rebuild-cache:
+    image: drillster/drone-volume-cache
+    rebuild: true
+    mount:
+      - ./vendor
+    volumes:
+      - ./cache:/cache
 
 services:
   database:
