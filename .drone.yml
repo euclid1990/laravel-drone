@@ -13,7 +13,7 @@ pipeline:
       - composer install
       - php artisan key:generate
       - php artisan config:cache
-      - sleep 300
+      - sleep 5
       - php artisan migrate
       - php vendor/bin/phpunit
   rebuild-cache:
@@ -27,7 +27,7 @@ pipeline:
 services:
   database:
     image: mysql
-    restart: always
+    detach: true
     expose:
       - "3306"
     environment:
