@@ -12,6 +12,7 @@ pipeline:
       - cp .env.example .env
       - composer install
       - php artisan key:generate
+      - sleep 15
       - php artisan migrate
       - php vendor/bin/phpunit
   rebuild-cache:
@@ -25,7 +26,6 @@ pipeline:
 services:
   database:
     image: mysql
-    restart: always
     expose:
       - "3306"
     environment:
